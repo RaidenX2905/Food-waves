@@ -18,7 +18,7 @@ const mockData = [
         description: "Crispy crepe spread with a spicy red chutney and served with potato curry.",
         price: 90,
         category: "Main Course",
-        image: "https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?auto=format&fit=crop&q=80&w=600",
+        image: "https://images.unsplash.com/photo-1589301760014-d929f39ce9b0?auto=format&fit=crop&q=80&w=600",
         isVegetarian: true,
         isSpicy: true
     },
@@ -27,7 +27,7 @@ const mockData = [
         description: "Popular Indo-Chinese appetizer made with cauliflower florets deep-fried and tossed in a sweet, sour, and hot manchurian sauce.",
         price: 120,
         category: "Starters",
-        image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=600",
+        image: "https://images.unsplash.com/photo-1626776876729-bab43bfe0e51?auto=format&fit=crop&q=80&w=600",
         isVegetarian: true,
         isSpicy: true
     },

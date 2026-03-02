@@ -1,7 +1,6 @@
-import { motion } from 'react-router-dom';
 import { ArrowRight, Star, Clock, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { motion as fm } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const Home = () => {
     return (
@@ -18,7 +17,7 @@ const Home = () => {
                 </div>
 
                 <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-                    <fm.div
+                    <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
@@ -46,7 +45,7 @@ const Home = () => {
                                 Book a Table
                             </Link>
                         </div>
-                    </fm.div>
+                    </motion.div>
                 </div>
             </section>
 
@@ -54,7 +53,7 @@ const Home = () => {
             <section className="py-20 bg-dark-900">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 -mt-32 relative z-20">
-                        <fm.div
+                        <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -64,9 +63,9 @@ const Home = () => {
                             <Clock className="w-12 h-12 text-primary-500 mx-auto mb-4" />
                             <h3 className="text-xl font-bold mb-2">Open 24/7</h3>
                             <p className="text-gray-400">Craving at 3 AM? We're open round the clock to serve you hot, fresh food anytime.</p>
-                        </fm.div>
+                        </motion.div>
 
-                        <fm.div
+                        <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -76,9 +75,9 @@ const Home = () => {
                             <Star className="w-12 h-12 text-primary-500 mx-auto mb-4" />
                             <h3 className="text-xl font-bold mb-2">Premium Quality</h3>
                             <p className="text-gray-400">Only the freshest, locally sourced ingredients go into preparing our signature dishes.</p>
-                        </fm.div>
+                        </motion.div>
 
-                        <fm.div
+                        <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -88,7 +87,7 @@ const Home = () => {
                             <MapPin className="w-12 h-12 text-primary-500 mx-auto mb-4" />
                             <h3 className="text-xl font-bold mb-2">Prime Location</h3>
                             <p className="text-gray-400">Located in the heart of Mysuru with ample parking and a beautiful ambiance.</p>
-                        </fm.div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
@@ -97,7 +96,7 @@ const Home = () => {
             <section className="py-20 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <fm.div
+                        <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -118,9 +117,9 @@ const Home = () => {
                                     <p className="text-sm text-gray-400">By 500+ Customers</p>
                                 </div>
                             </div>
-                        </fm.div>
+                        </motion.div>
 
-                        <fm.div
+                        <motion.div
                             initial={{ opacity: 0, x: 50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -140,7 +139,7 @@ const Home = () => {
                             >
                                 Discover Our Story
                             </Link>
-                        </fm.div>
+                        </motion.div>
                     </div>
                 </div>
             </section>

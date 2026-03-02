@@ -160,20 +160,6 @@ const Contact = () => {
                 </motion.div>
             </div>
 
-            {/* Map Placeholder for visual completeness */}
-            <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="mt-16 rounded-2xl overflow-hidden glass h-96 border border-glass-border relative object-cover flex items-center justify-center bg-dark-800"
-            >
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=1920')] opacity-20 bg-center bg-cover" />
-                <div className="z-10 text-center glass-card p-6 rounded-xl">
-                    <MapPin className="h-10 w-10 text-primary-500 mx-auto mb-2" />
-                    <p className="font-bold text-lg">Interactive Map Temporarily Disabled</p>
-                    <p className="text-gray-400 text-sm">Please see physical address above.</p>
-                </div>
-            </motion.div>
         </div>
     );
 };

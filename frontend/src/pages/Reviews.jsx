@@ -17,7 +17,8 @@ const Reviews = () => {
 
     const fetchReviews = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/api/reviews');
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+            const res = await axios.get(`${API_URL}/api/reviews`);
             setReviews(res.data.data);
         } catch (err) {
             setError('Failed to load reviews.');
@@ -32,7 +33,8 @@ const Reviews = () => {
         setSubmitMessage({ type: '', text: '' });
 
         try {
-            await axios.post('http://localhost:5000/api/reviews', formData);
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+            await axios.post(`${API_URL}/api/reviews`, formData);
             setSubmitMessage({ type: 'success', text: 'Thank you for your review!' });
             setFormData({ author: '', rating: 5, comment: '' });
             fetchReviews(); // Refresh list

@@ -12,7 +12,8 @@ const Menu = () => {
     useEffect(() => {
         const fetchMenu = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/api/menu');
+                const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+                const res = await axios.get(`${API_URL}/api/menu`);
                 setMenuItems(res.data.data);
             } catch (err) {
                 setError('Failed to fetch menu items. Please try again later.');
@@ -57,8 +58,8 @@ const Menu = () => {
                                 key={category}
                                 onClick={() => setActiveCategory(category)}
                                 className={`px-6 py-2 rounded-full font-medium transition-colors ${activeCategory === category
-                                        ? 'bg-primary-500 text-white'
-                                        : 'glass hover:bg-white/10 text-gray-300'
+                                    ? 'bg-primary-500 text-white'
+                                    : 'glass hover:bg-white/10 text-gray-300'
                                     }`}
                             >
                                 {category}

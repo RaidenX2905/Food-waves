@@ -23,7 +23,7 @@ const Home = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className="text-primary-500 uppercase tracking-widest font-semibold text-sm mb-4 block">
+                        <span className="text-primary-500 uppercase tracking-widest font-bold text-base md:text-lg mb-4 block drop-shadow-md">
                             Welcome to Food Waves
                         </span>
                         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">

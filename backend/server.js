@@ -42,3 +42,4 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+// Trigger nodemon restart for clearing mock memory payload (Local images injected!)

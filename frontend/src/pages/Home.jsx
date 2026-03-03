@@ -7,12 +7,13 @@ const Home = () => {
         <div className="w-full">
             {/* Hero Section */}
             <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&q=80&w=1920"
-                        alt="Restaurant Ambiance"
-                        className="w-full h-full object-cover opacity-30"
-                    />
+                <div
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
+                    style={{
+                        backgroundImage: 'url("https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=1920")',
+                        backgroundPosition: 'center 40%'
+                    }}
+                >
                     <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/50 to-transparent" />
                 </div>
 
@@ -37,12 +38,6 @@ const Home = () => {
                                 className="bg-primary-600 hover:bg-primary-500 text-white px-8 py-4 rounded-full font-semibold transition-all hover:shadow-[0_0_20px_rgba(245,158,11,0.4)] flex items-center justify-center gap-2"
                             >
                                 Explore Menu <ArrowRight className="h-5 w-5" />
-                            </Link>
-                            <Link
-                                to="/contact"
-                                className="glass hover:bg-white/10 text-white px-8 py-4 rounded-full font-semibold transition-all flex items-center justify-center"
-                            >
-                                Book a Table
                             </Link>
                         </div>
                     </motion.div>
@@ -104,7 +99,7 @@ const Home = () => {
                         >
                             <div className="absolute -inset-4 bg-primary-500/20 blur-3xl rounded-full" />
                             <img
-                                src="https://images.unsplash.com/photo-1589302168068-964664d93cb0?auto=format&fit=crop&q=80&w=800"
+                                src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?auto=format&fit=crop&q=80&w=800"
                                 alt="Signature Biryani"
                                 className="relative rounded-2xl z-10 w-full h-[500px] object-cover shadow-2xl border border-glass-border"
                             />

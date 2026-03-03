@@ -10,12 +10,13 @@ const mockReviews = [];
 router.get('/', async (req, res) => {
     try {
         if (mongoose.connection.readyState !== 1) {
-            return res.json({ success: true, count: mockReviews.length, data: mockReviews });
+            return res.json({ success: true, count: 0, data: [] });
         }
 
         let reviews = await Review.find().sort({ date: -1 });
         res.json({ success: true, count: reviews.length, data: reviews });
     } catch (err) {
+        console.error('Reviews GET Error:', err);
         res.status(500).json({ success: false, message: 'Server Error' });
     }
 });
@@ -36,7 +37,6 @@ router.post('/',
         try {
             if (mongoose.connection.readyState !== 1) {
                 const newReview = { ...req.body, _id: Date.now().toString(), date: new Date() };
-                mockReviews.unshift(newReview);
                 return res.status(201).json({ success: true, data: newReview });
             }
 

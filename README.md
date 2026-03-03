@@ -2,8 +2,6 @@
 
 A modern, production-ready full-stack restaurant web application developed for professional showcasing. Designed with a mobile-first approach, it features a sleek dark UI with glassmorphism, fluid animations, and a seamless user experience.
 
-![Mockup/Hero Image Placeholder](frontend/public/vite.svg)
-
 ## 📌 Features
 
 ### Frontend (Client)

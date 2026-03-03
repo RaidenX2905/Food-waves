@@ -81,7 +81,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
-                        className="md:hidden glass absolute top-full left-0 w-full"
+                        className="md:hidden bg-dark-900/95 backdrop-blur-xl border-b border-glass-border shadow-2xl absolute top-full left-0 w-full"
                     >
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                             {navLinks.map((link) => (

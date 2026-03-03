@@ -23,7 +23,7 @@ A modern, production-ready full-stack restaurant web application developed for p
 
 ## 🚀 Live Demo
 
-- **Frontend:** https://food-waves.vercel.app/reviews
+- **Frontend:** https://food-waves.vercel.app/
 
 
 ## 💻 Getting Started (Local Development)

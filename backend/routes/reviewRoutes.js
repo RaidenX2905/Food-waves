@@ -4,16 +4,42 @@ const router = express.Router();
 const Review = require('../models/Review');
 const mongoose = require('mongoose');
 
-const mockReviews = [];
+const mockReviews = [
+    {
+        _id: "test_1",
+        author: "Priya S.",
+        rating: 5,
+        comment: "The absolute best premium dining experience in Mysuru. The ambiance is gorgeous and the food is perfectly spiced. Highly recommend the Biryani!",
+        date: new Date()
+    },
+    {
+        _id: "test_2",
+        author: "Rahul M.",
+        rating: 5,
+        comment: "I love that they are open 24/7. My friends and I came in at 2 AM and the fresh quality absolutely blew us away. Incredible service.",
+        date: new Date(Date.now() - 86400000)
+    },
+    {
+        _id: "test_3",
+        author: "David L.",
+        rating: 4,
+        comment: "Very elegant interior. The mocktails are refreshing and the curries are rich. Will be coming back with my family next week.",
+        date: new Date(Date.now() - 172800000)
+    }
+];
 
 // GET /api/reviews
 router.get('/', async (req, res) => {
     try {
         if (mongoose.connection.readyState !== 1) {
-            return res.json({ success: true, count: 0, data: [] });
+            return res.json({ success: true, count: mockReviews.length, data: mockReviews });
         }
 
         let reviews = await Review.find().sort({ date: -1 });
+        if (reviews.length === 0) {
+            // Seed the 3 dummy reviews
+            reviews = await Review.insertMany(mockReviews.map(({ _id, ...rest }) => rest));
+        }
         res.json({ success: true, count: reviews.length, data: reviews });
     } catch (err) {
         console.error('Reviews GET Error:', err);
@@ -37,6 +63,7 @@ router.post('/',
         try {
             if (mongoose.connection.readyState !== 1) {
                 const newReview = { ...req.body, _id: Date.now().toString(), date: new Date() };
+                mockReviews.unshift(newReview);
                 return res.status(201).json({ success: true, data: newReview });
             }
 
